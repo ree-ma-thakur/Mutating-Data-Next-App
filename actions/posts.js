@@ -45,12 +45,12 @@ export async function createPost(prevState, formData) {
     content,
     userId: 1,
   });
-
+  revalidatePath("/", "layout"); // Means all the pages of app should revalidated
   redirect("/feed");
 }
 
 export async function togglePostLikeStatus(postId) {
   await updatePostLikeStatus(postId, 2);
-  revalidatePath("/feed"); // Means this page should revalidated
-  // revalidatePath("/", "layout"); // Means all the pages of app should revalidated
+  // revalidatePath("/feed"); // Means this page should revalidated
+  revalidatePath("/", "layout"); // Means all the pages of app should revalidated
 }
