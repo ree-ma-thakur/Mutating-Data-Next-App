@@ -62,3 +62,10 @@
 - We can use 'fill' prop is we don't know the width & height of image
 - We need to configure the hostname(external site) in next.config file otherwise nextjs will block images url from external sites
 - loader props in Image: It takes a function as a value that will be executed by Nextjs when it will determine the path of image
+
+# Metadata
+
+- https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+- Static: MD using export const metadata object
+- Dynamic MD using export async function generateMetadata, this function will have data or confog obj
+- generateMD returns the object with title & description
