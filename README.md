@@ -50,3 +50,14 @@
 - In production caching is more aggressvie than development, even after changes in DB, in production code caching does not show the updated data or page
 - Next pre-renders all the pages during build process in production & caches those pre-rendered pages & then it never re-renders them thereafter then, unless they are dynamic pages
 - Therefore we should tell react that it should re-render the pages whenever we change the data, we can do this using rP()
+
+## OPTIMIZATION
+
+# Image optimization
+
+- Using Image from 'next/image'
+- This tag has width, height, srcset(for different screen size, resolutions & densities)
+- Lazy loading of image
+- To avoid lazy loading we can add 'priority' prop which will pre load the image
+- We can use 'fill' prop is we don't know the width & height of image
+- We need to configure the hostname(external site) in next.config file otherwise nextjs will block images url from external sites
