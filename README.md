@@ -61,3 +61,4 @@
 - To avoid lazy loading we can add 'priority' prop which will pre load the image
 - We can use 'fill' prop is we don't know the width & height of image
 - We need to configure the hostname(external site) in next.config file otherwise nextjs will block images url from external sites
+- loader props in Image: It takes a function as a value that will be executed by Nextjs when it will determine the path of image
